@@ -37,10 +37,9 @@ Each repo is for a different part of the project tentatively structured as follo
    python -m pip install -e .
    ```
 6. Open the website locally. First you have to navigate
-   into the directory hosting the flask info and then
-   you can build the website. Run the following commands.
-   From the root directory where you installed these repos:
+   into the root directory and then
+   you can build the website. Run the following commands:
    ```
-   cd $OTTER_ROOT/webotter/
-   flask --app . run
+   cd $OTTER_ROOT
+   flask --app webotter run
    ```
