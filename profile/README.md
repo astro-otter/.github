@@ -39,7 +39,7 @@ Each repo is for a different part of the project tentatively structured as follo
   ```
   import os
   from otter import Otter
-  otter = Otter(os.path.join(os.environ(['OTTER_ROOT']), 'otterdb', '.otter'))
+  otter = Otter(os.path.join(os.environ['OTTER_ROOT'], 'otterdb', '.otter'))
   res = otter.query(names='AT2018hyz')
   print(res)
   ```
