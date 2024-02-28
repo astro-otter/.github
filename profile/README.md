@@ -8,7 +8,7 @@ Each repo is for a different part of the project tentatively structured as follo
 |-----------------------|---------------------------------|
 | otter | The Python API for accessing the data in OTTER |
 | webotter | Code for development of the frontend website of otter |
-| otterdb | Code for managing the backend database of otter |
+| otterdb | Code for managing the backend "database" of otter |
 
 ## Developer Instructions
 1. Set the `OTTER_ROOT` environment variable
@@ -18,28 +18,28 @@ Each repo is for a different part of the project tentatively structured as follo
 2. Clone the relevant repos:
    ```
    git clone https://github.com/astro-otter/otter.git $OTTER_ROOT
-   git clone https://github.com/astro-otter/webotter.git $OTTER_ROOT
    git clone https://github.com/astro-otter/otterdb.git $OTTER_ROOT
    ```
 3. Install the NASA ADS Python API by following the instructions at https://ads.readthedocs.io/en/latest/#getting-started
-4. Build the database. First install arangodb from
-   https://www.arangodb.com/download-major/.
-   Then, you can build the database by running the
-   following commands:
-   ```
-   cd $OTTER_ROOT/otterdb/db/
-   ./setup.sh
-   ```
-5. Install otter, the API for this database. From
+4. Install otter, the API for this database. From
    the root directory where you installed these repos:
    ```
    cd $OTTER_ROOT/otter
    python -m pip install -e .
    ```
-6. Open the website locally. First you have to navigate
-   into the root directory and then
-   you can build the website. Run the following commands:
+5. Process the data to build the local "database" (although it is really just a directory). First install arangodb from
+   https://www.arangodb.com/download-major/.
+   Then, you can build the database by running the
+   following commands:
    ```
-   cd $OTTER_ROOT
-   flask --app webotter run
+   cd $OTTER_ROOT/otter/scripts/
+   ./process-data.sh $OTTER_ROOT/otterdb/unprocessed-data $OTTER_ROOT/otterdb/.otter
    ```
+6. Easily access the data using the Otter code! In python:
+  ```
+  import os
+  from otter import Otter
+  otter = Otter(os.path.join(os.environ(['OTTER_ROOT']), 'otterdb', '.otter'))
+  res = otter.query(names='AT2018hyz')
+  print(res)
+  ```
