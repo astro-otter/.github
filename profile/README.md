@@ -17,8 +17,8 @@ Each repo is for a different part of the project tentatively structured as follo
    ```
 2. Clone the relevant repos:
    ```
-   git clone https://github.com/astro-otter/otter.git $OTTER_ROOT
-   git clone https://github.com/astro-otter/otterdb.git $OTTER_ROOT
+   git clone https://github.com/astro-otter/otter.git $OTTER_ROOT/otter
+   git clone https://github.com/astro-otter/otterdb.git $OTTER_ROOT/otterdb
    ```
 3. Install the NASA ADS Python API by following the instructions at https://ads.readthedocs.io/en/latest/#getting-started
 4. Install otter, the API for this database. From
