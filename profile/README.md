@@ -27,9 +27,8 @@ Each repo is for a different part of the project tentatively structured as follo
    cd $OTTER_ROOT/otter
    python -m pip install -e .
    ```
-5. Process the data to build the local "database" (although it is really just a directory). First install arangodb from
-   https://www.arangodb.com/download-major/.
-   Then, you can build the database by running the
+5. Process the data to build the local "database" (although it is really just a directory).
+   Then, you can build the "database" by running the
    following commands:
    ```
    cd $OTTER_ROOT/otter/scripts/
