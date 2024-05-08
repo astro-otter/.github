@@ -32,7 +32,7 @@ Each repo is for a different part of the project tentatively structured as follo
    following commands:
    ```
    cd $OTTER_ROOT/otter/scripts/
-   python3 gen_summary_table.py --otterdir $OTTER_DIR
+   python3 gen_summary_table.py --otterroot $OTTER_ROOT
    ```
 6. Easily access the data using the Otter code! In python:
   ```
