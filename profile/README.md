@@ -7,8 +7,15 @@ Each repo is for a different part of the project tentatively structured as follo
 | Name | Description |
 |-----------------------|---------------------------------|
 | otter | The Python API for accessing the data in OTTER |
-| webotter | Code for development of the frontend website of otter |
 | otterdb | Code for managing the backend "database" of otter |
+| otter-docker | Code and instructions to use the otter docker image and work with the otter dataset |
+| webotter | Code for development of the frontend website of otter (currently deprecated) |
+
+## OTTER Docker Instructions
+Install docker, clone the `otter-docker` repo, and then run `./build.sh`. Then you will have a standalone
+jupyter lab server at `localhost:8989` for you to work with the otter dataset in! That's it!
+
+See the README file in the `otter-docker` repo for more detailed instructions
 
 ## Developer Instructions
 1. Set the `OTTER_ROOT` environment variable
