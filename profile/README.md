@@ -17,35 +17,22 @@ jupyter lab server at `localhost:8989` for you to work with the otter dataset in
 
 See the README file in the `otter-docker` repo for more detailed instructions
 
-## Developer Instructions
-1. Set the `OTTER_ROOT` environment variable
-   ```
-   export OTTER_ROOT=/path/to/where/to/clone
-   ```
-2. Clone the relevant repos:
-   ```
-   git clone https://github.com/astro-otter/otter.git $OTTER_ROOT/otter
-   git clone https://github.com/astro-otter/otterdb.git $OTTER_ROOT/otterdb
-   ```
-3. Install the NASA ADS Python API by following the instructions at https://ads.readthedocs.io/en/latest/#getting-started
-4. Install otter, the API for this database. From
-   the root directory where you installed these repos:
-   ```
-   cd $OTTER_ROOT/otter
-   python -m pip install -e .
-   ```
-5. Process the data to build the local "database" (although it is really just a directory).
-   Then, you can build the "database" by running the
-   following commands:
-   ```
-   cd $OTTER_ROOT/otter/scripts/
-   python3 gen_summary_table.py --otterroot $OTTER_ROOT
-   ```
-6. Easily access the data using the Otter code! In python:
-  ```
-  import os
-  from otter import Otter
-  otter = Otter(os.path.join(os.environ['OTTER_ROOT'], 'otterdb', '.otter'))
-  res = otter.query(names='AT2018hyz')
-  print(res)
-  ```
+## Python API
+Once you have the Docker container running you will also have started the API server endpoint. This means
+you can also query OTTER from python! See https://astro-otter.readthedocs.io for detailed instructions. A sample
+use case to get all of the data for the TDE ASASSN-14li and then access it's coordinates and photometry is below. 
+```
+# 1) query for the TDE ASASSN-14li 
+from otter import Otter
+db = Otter()
+t = db.query(names="ASASSN-14li")[0]
+print(t)
+
+# Get and print an astropy skycoord for ASASSN-14li
+coord = t.get_skycoord()
+print(coord)
+
+# get the photometry
+phot = db.get_phot(names="ASASSN-14li")
+print(phot)
+```
