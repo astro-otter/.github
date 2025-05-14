@@ -9,10 +9,7 @@ Each repo is for a different part of the project tentatively structured as follo
 | otter | The Python API for accessing the data in OTTER |
 | otterdb | Code for managing the backend "database" of otter |
 | otter-docker | Code and instructions to use the otter docker image and work with the otter dataset |
-| webotter | Code for development of the frontend website of otter (currently deprecated) |
-
-## OTTER Docker Instructions
-See the README file in the `otter-docker` repo for more detailed instructions
+| otter-web | Code for development of the frontend website of otter |
 
 ## Python API
 Once you have the Docker container running you will also have started the API server endpoint. This means
@@ -33,3 +30,6 @@ print(coord)
 phot = db.get_phot(names="ASASSN-14li")
 print(phot)
 ```
+
+## Dev Instructions
+See the detailed developer installation instructions at: https://astro-otter.readthedocs.io/en/latest/introduction.html#developer-installation
