@@ -2,6 +2,8 @@
 
 You have found the GitHub Organization for the Open mulTiwavelength Transient Event Repository (or OTTER)!
 
+The OTTER web application is available at https://otter.idies.jhu.edu
+
 Each repo is for a different part of the project tentatively structured as follows:
 
 | Name | Description |
