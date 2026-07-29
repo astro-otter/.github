@@ -36,19 +36,22 @@ print(phot)
 ## Citing OTTER
 If you make use of OTTER in your research please cite both our catalog and software papers:
 ```
-@ARTICLE{Franz2025_OTTER_Catalog,
-       author = {{Franz}, Noah and {Alexander}, Kate D and {Gomez}, Sebastian and {Christy}, Collin T and {Laskar}, Tanmoy and {van Velzen}, Sjoert and {Earl}, Nicholas and {Gezari}, Suvi and {Karmen}, Mitchell and {Margutti}, Raffaella and {Pearson}, Jeniveve and {Villar}, V. Ashley and {Zabludoff}, Ann I},
+@ARTICLE{Franz2026_OTTER_Catalog,
+       author = {{Franz}, Noah and {Alexander}, Kate D. and {Gomez}, Sebastian and {Christy}, Collin T. and {Laskar}, Tanmoy and {van Velzen}, Sjoert and {Earl}, Nicholas and {Gezari}, Suvi and {Karmen}, Mitchell and {Margutti}, Raffaella and {Pearson}, Jeniveve and {Villar}, V. Ashley and {Zabludoff}, Ann I.},
         title = "{The Open mulTiwavelength Transient Event Repository (OTTER): Infrastructure Release and Tidal Disruption Event Catalog}",
-      journal = {arXiv e-prints},
-     keywords = {High Energy Astrophysical Phenomena, Instrumentation and Methods for Astrophysics},
-         year = 2025,
-        month = sep,
-          eid = {arXiv:2509.05405},
-        pages = {arXiv:2509.05405},
+      journal = {\apj},
+     keywords = {Catalogs, Astronomy databases, Astronomy software, Transient sources, Tidal disruption, 205, 83, 1855, 1851, 1696, High Energy Astrophysical Phenomena, Instrumentation and Methods for Astrophysics},
+         year = 2026,
+        month = mar,
+       volume = {999},
+       number = {2},
+          eid = {243},
+        pages = {243},
+          doi = {10.3847/1538-4357/ae346e},
 archivePrefix = {arXiv},
        eprint = {2509.05405},
  primaryClass = {astro-ph.HE},
-       adsurl = {https://ui.adsabs.harvard.edu/abs/2025arXiv250905405F},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2026ApJ...999..243F},
       adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
 
